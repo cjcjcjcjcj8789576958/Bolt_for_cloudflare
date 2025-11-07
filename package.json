@@ -5,18 +5,16 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "build": "esbuild --bundle app.js --outfile=dist/app.js --platform=node --target=node20 --minify"
+    "build": "esbuild app.js --bundle --outfile=dist/app.js --platform=node --target=node20 --minify --external:*.wasm"
   },
   "dependencies": {
     "@fastify/static": "^8.2.0",
     "@mercuryworkshop/bare-mux": "^2.1.7",
     "@mercuryworkshop/epoxy-transport": "^2.1.27",
     "@mercuryworkshop/libcurl-transport": "^1.5.0",
-    "@mercuryworkshop/scramjet": "https://github.com/MercuryWorkshop/scramjet/releases/download/latest/mercuryworkshop-scramjet-1.0.2-dev.tgz",
-    "@mercuryworkshop/wisp-js": "^0.3.3",
+    "@mercuryworkshop/wisp-js": "^0.4.0",
     "@titaniumnetwork-dev/ultraviolet": "^3.2.10",
-    "fastify": "^5.3.3",
-    "wisp-server-node": "^1.1.7"
+    "fastify": "^5.3.3"
   },
   "devDependencies": {
     "esbuild": "^0.19.5",
