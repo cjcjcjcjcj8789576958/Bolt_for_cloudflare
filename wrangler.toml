@@ -1,0 +1,3 @@
+name = "bolt-unblocker"
+main = "dist/app.js"
+compatibility_date = "2025-11-07"
